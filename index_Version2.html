@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BeatBot de Cumpleaños</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🤖 BeatBot de Cumpleaños</h1>
+    <p class="sub">Dale <b>Start</b>, elige un patrón, ajusta el <b>BPM</b> y activa la melodía de “Cumpleaños Feliz”.</p>
+  </header>
+
+  <div class="wrap">
+    <section class="card controls">
+      <div class="row">
+        <button id="start" aria-label="Iniciar">Start ▶</button>
+        <button id="stop" aria-label="Detener">Stop ■</button>
+        <label for="pattern">Patrón
+          <select id="pattern">
+            <option value="party">Party Pop</option>
+            <option value="dembow">Dembow</option>
+            <option value="four">Four on the floor</option>
+          </select>
+        </label>
+        <label for="bpm">BPM
+          <input id="bpm" class="slider" type="range" min="60" max="160" value="110" aria-valuenow="110" aria-valuemin="60" aria-valuemax="160"/>
+          <span id="bpmv">110</span>
+        </label>
+        <label for="vol">Volumen
+          <input id="vol" class="slider" type="range" min="0" max="1" value="0.9" step="0.01" aria-valuenow="0.9" aria-valuemin="0" aria-valuemax="1"/>
+        </label>
+        <label for="melodyToggle" style="display:flex;gap:8px;align-items:center">Melodía 🎂
+          <input id="melodyToggle" class="toggle" type="checkbox" checked>
+        </label>
+        <label for="ttsToggle" style="display:flex;gap:8px;align-items:center">Voz "¡Feliz Cumple!"
+          <input id="ttsToggle" class="toggle" type="checkbox" checked>
+        </label>
+      </div>
+    </section>
+
+    <section class="card grid" id="sequencer"></section>
+  </div>
+
+  <footer>Hecho con Web Audio API. Funciona en navegadores modernos (iOS/Android/desktop).</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

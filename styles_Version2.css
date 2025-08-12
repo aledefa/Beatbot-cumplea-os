@@ -1,0 +1,32 @@
+:root{--bg:#0f1220;--card:#171a2b;--fg:#e9ecff;--muted:#9aa0c6;--acc:#7cf;--acc2:#ff8bd2}
+*{box-sizing:border-box;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+body{margin:0;background:
+    radial-gradient(1200px 600px at 10% -20%,#14203a 0%,transparent 60%),
+    radial-gradient(1000px 800px at 110% 10%,#26154a 0%,transparent 60%),var(--bg);color:var(--fg)}
+header{padding:24px 20px 0;text-align:center}
+h1{margin:0;font-size:28px;letter-spacing:.4px}
+p.sub{margin:6px 0 20px;color:var(--muted)}
+.wrap{max-width:980px;margin:0 auto;padding:20px;display:grid;gap:16px}
+.card{background:linear-gradient(180deg,#1b2036 0%,#141a2a 100%);
+      border:1px solid #2a3557;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.controls{padding:16px;display:grid;gap:10px}
+.controls .row{align-items:center}
+.controls label{color:var(--muted);font-size:13px}
+button{background:linear-gradient(180deg,#2b7cff,#2fd0ff);color:#00121b;border:none;border-radius:14px;
+       padding:12px 18px;font-weight:700;letter-spacing:.2px;cursor:pointer;box-shadow:0 8px 18px rgba(29,163,255,.25)}
+button#stop{background:linear-gradient(180deg,#ff7b7b,#ff5252);color:white}
+.toggle{appearance:none;width:42px;height:26px;border-radius:999px;background:#394162;position:relative;outline:none;cursor:pointer}
+.toggle:checked{background:#2fd0ff}
+.toggle::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:white;transition:.2s}
+.toggle:checked::after{left:19px}
+.slider{width:180px}
+select,input[type="number"],input[type="range"]{background:#0f1427;color:var(--fg);border:1px solid #2a3557;border-radius:12px;padding:10px}
+.grid{padding:12px;display:grid;gap:10px}
+.steps{display:grid;grid-template-columns:repeat(16,1fr);gap:6px}
+.track{display:grid;gap:6px}
+.step{height:28px;border-radius:8px;border:1px solid #31406d;background:#0f1427;cursor:pointer}
+.step.on{background:linear-gradient(180deg,#7cf,#4ac0ff)}
+.step.playing{outline:2px solid var(--acc2);outline-offset:1px}
+.label{font-size:12px;color:#ced3ff99;margin:2px 0 4px}
+footer{padding:10px 20px 30px;text-align:center;color:var(--muted)}
